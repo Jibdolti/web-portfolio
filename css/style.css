@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+@import url(reset.css); 
+@import url(font.css); 
+@import url(aos.css); /* AOS 애니메이션 기본 설정 */
+
+[data-aos] { opacity: 0; transition-property: opacity, transform; } 
+
+[data-aos].aos-animate { opacity: 1; } 
+
+body { background-image: url("../images/Background.jpg"); object-fit: cover; overflow-x: hidden; margin: 0 auto; padding: 0; height: 100vh; }
+
+
+header { margin: 0 auto; } 
+header .container { position: relative; text-align: center; } 
+header .container img { width: auto; /* 배경 이미지 크기 조정 */ margin: 20px; } 
+
+header .container h1 { position: absolute; top: 50%; left: 52%; transform: translate(-50%, -50%); color: white; font-size: 80px; font-weight: bold; letter-spacing: 5px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 */ } 
+
+header .container h2 { position: absolute; top: 40%; left: 32.8%; transform: translate(-50%, -50%); color: white; font-size: 20px; letter-spacing: 2px; } 
+
+header figure { } 
+header figure ul { } 
+header figure ul li.left { position: absolute; top: 120px; left: 60px; } 
+header figure ul li.right { position: absolute; top: 30%; right: 7%; } 
+header figure ul li.left2 { position: absolute; top: 70%; left: 10px; } 
+header figure ul li.right2 { position: absolute; right: 60px; } 
+
+#profile { width: 1444px; height: 791px; background: rgb(255, 255, 255, 0.2); margin: 0 auto; border-radius: 20px; position: relative; } 
+#profile h1 { padding: 20px 0 0 50px; color: #fff; font-family: 'JalnanGothic'; font-size: 40px; } 
+#profile h2 { position: absolute; top: 10%; left: 35px; z-index: 1; font-family: 'Pretendard-Bold'; } 
+#profile span { position: absolute; top: 22%; left: 20%; font-size: 24px; color: #fff; } 
+/* license */
+#profile .license { width: 703px; height: 356px; background: rgb(255, 255, 255, 0.5); border: 4px solid #fff; position: absolute; left: 45px; bottom: 45px; } 
+#profile .license h3 { font-size: 40px; padding: 20px 30px; font-family: 'Pretendard-Light'; } 
+#profile .license ul { display: flex; justify-content: space-between; align-items: center; } 
+#profile .license ul li.title { font-size: 24px; float: left; margin: 40px 0 0 30px; } 
+#profile .license ul li.date { font-size: 22px; float: right; margin: 40px 40px 0 0; } 
+/* career */
+#profile .career { width: 593px; height: 378px; background: rgb(255, 255, 255, 0.5); border: 4px solid #fff; position: absolute; top: 85px; right: 45px; } 
+#profile .career h3 { font-size: 40px; padding: 20px 30px; font-family: 'Pretendard-Light'; } 
+#profile .career ul { display: flex; justify-content: space-between; align-items: end; } 
+#profile .career ul li.title { font-size: 22px; float: left; margin: 30px 0 0 30px; } 
+#profile .career ul li.date { font-size: 22px; float: right; margin: 40px 40px 0 0; } 
+
+#profile .skill { width: 593px; height: 236px; background: rgb(255, 255, 255, 0.5); border: 4px solid #fff; position: absolute; bottom: 44px; right: 45px; } 
+#profile .skill h3 { font-size: 40px; padding: 20px 30px; font-family: 'Pretendard-Light'; } 
+#profile .skill ul { display: flex; gap: 25px; justify-content: center; align-items: center; margin-top: 20px; } 
+#profile .skill ul li { } 
+#profile .skill ul li img { } 
+#profile .star ul { } 
+#profile .star ul li.left { position: absolute; top: -42%; left: -10%; } 
+#profile .star ul li.right { position: absolute; top: -15%; right: -12%; } 
+#profile .star ul li.left2 { position: absolute; left: -10%; bottom: -35%; } 
+#profile .star ul li.right2 { position: absolute; right: -12%; bottom: -10%; } 
+
+/* WEB SITE */
+#website { padding-top: 15%; position: relative; height: 3000px; } 
+#website h1 { font-size: 72px; text-align: center; color: #fff; font-family: 'JalnanGothic'; text-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4); position: relative; } 
+#website h1::before { content: ""; position: absolute; width: 25%; height: 10px; background: #000; bottom: 15px; left: 38%; z-index: -1; } 
+/* side img */
+#website .rock { position: absolute; width: 500px; display: flex; justify-content: center; align-items: center; } 
+#website .rock img { width: 100%; } 
+#website .rock:nth-child(odd) { right: 0%; animation: floatAnimation 13s infinite; } 
+#website .rock:nth-child(even) { left: -0%; } 
+#website .rock:nth-child(1) { top: 15%; width: 30%; } 
+#website .rock:nth-child(2) { top: 30%; width: 35%; animation: floatAnimation 15s infinite; } 
+#website .rock:nth-child(3) { top: 50%; right: 8%; width: 35%; } 
+#website .rock:nth-child(4) { top: 70%; animation: floatAnimation 18s infinite; } 
+#website .rock:nth-child(5) { top: 80%; } 
+#website .rock:nth-child(6) { top: 95%; animation: floatAnimation 22s infinite; } 
+/* text */
+#website .rock h2, p { line-height: 40px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); font-weight: bold; } 
+#website .rock h2 span { color: #fff; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); } 
+#website .rock p span { color: #fff; font-family: 'Pretendard-Light'; line-height: 45px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); } 
+
+/* button */
+#website .rock button { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: 8%; right: 50%; } 
+#website .rock button.second { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: 5%; left: 50%; } 
+#website .rock button.third { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: -5%; right: 25%; } 
+#website .rock button.fourth { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: -7%; right: 25%; } 
+#website .rock button.Fifth { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: 10%; right: 50%; } 
+#website .rock button.Sixth { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: 5%; left: 40%; } 
+#website .rock button a { color: #fff; display: block; } 
+#website .rock button:hover { background-color: #ff8000; } 
+
+/* nth(1) */
+#website .rock:nth-child(1) h2 { width: 260px; height: 67px; position: absolute; top: 35%; right: 75%; color: #ffa200; font-family: 'Pretendard-Light' !important; text-align: right; } 
+#website .rock:nth-child(1) p { width: 332px; height: 222px; position: absolute; top: 45%; right: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+#website .rock:nth-child(1) p.design { width: 332px; height: 222px; position: absolute; top: 73%; right: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+#website .rock:nth-child(1) p.publsing { width: 332px; height: 222px; position: absolute; top: 79%; right: 65%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+/* nth(2) */
+#website .rock:nth-child(2) h2 { width: 102px; height: 22px; position: absolute; top: 42%; left: 80%; color: #ffa200; font-family: 'Pretendard-Light' !important; font-size: 24px; } 
+#website .rock:nth-child(2) p { width: 340px; height: 242px; position: absolute; top: 50%; left: 80%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; } 
+#website .rock:nth-child(2) p.design { width: 332px; height: 222px; position: absolute; top: 77%; left: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+#website .rock:nth-child(2) p.publsing { width: 332px; height: 222px; position: absolute; top: 82%; left: 65%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+/* nth(3) */
+#website .rock:nth-child(3) h2 { width: 270px; height: 120px; position: absolute; top: 30%; right: -10%; color: #ffa200; font-family: 'Pretendard-Light' !important; } 
+#website .rock:nth-child(3) p { width: 349px; height: 297px; position: absolute; top: 45%; right: -20%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; } 
+#website .rock:nth-child(3) p.design { position: absolute; top: 84%; right: 10%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+#website .rock:nth-child(3) p.publsing { position: absolute; top: 90%; right: 15%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+/* nth(4) */
+#website .rock:nth-child(4) h2 { width: 114px; height: 65px; position: absolute; top: 32%; left: 75%; color: #ffa200; font-family: 'Pretendard-Light' !important; } 
+#website .rock:nth-child(4) p { width: 409px; height: 297px; position: absolute; top: 45%; left: 80%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; } 
+#website .rock:nth-child(4) p.design { position: absolute; top: 85%; left: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+#website .rock:nth-child(4) p.publsing { position: absolute; top: 91%; left: 65%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+/* nth(5) */
+#website .rock:nth-child(5) h2 { width: 198px; height: 76px; position: absolute; top: 25%; right: 70%; color: #ffa200; font-family: 'Pretendard-Light' !important; text-align: right; } 
+#website .rock:nth-child(5) p { width: 429px; height: 187px; position: absolute; top: 40%; right: 70%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+#website .rock:nth-child(5) p.design { position: absolute; top: 68%; right: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+#website .rock:nth-child(5) p.publsing { position: absolute; top: 74%; right: 65%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+/* nth(6) */
+#website .rock:nth-child(6) h2 { width: 169px; height: 76px; position: absolute; top: 40%; left: 70%; color: #ffa200; font-family: 'Pretendard-Light' !important; text-align: left; } 
+#website .rock:nth-child(6) p { width: 429px; height: 187px; position: absolute; top: 53%; left: 70%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+#website .rock:nth-child(6) p.design { position: absolute; top: 76%; left: 60%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+#website .rock:nth-child(6) p.publsing { position: absolute; top: 82%; left: 50%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+/* background */
+#website .ballon li:nth-child(1) { position: absolute; top: 20%; left: 13%; z-index: -1; animation: floatAnimation 15s infinite; } 
+#website .ballon li:nth-child(2) { position: absolute; right: -5%; bottom: -45%; z-index: -1; animation: floatAnimation 18s infinite reverse; } 
+#website .ballon li:nth-child(2) img { width: 90%; } 
+/* cloud */
+#website .cloud li:nth-child(1) { position: absolute; top: 28%; right: -5%; z-index: -1; animation: floatAnimation 20s infinite; } 
+#website .cloud li:nth-child(2) { position: absolute; top: 70%; left: -20%; z-index: -1; width: 30%; animation: floatAnimation 25s infinite reverse; } 
+#website .cloud li:nth-child(3) { position: absolute; right: -40%; bottom: -45%; mix-blend-mode: screen; animation: floatAnimation 22s infinite; } 
+
+@keyframes floatAnimation { 0%, 100% { transform: translateY(0); } 
+ 50% { transform: translateY(-50px); } 
+ }
+.vertical-text { writing-mode: vertical-rl; text-orientation: upright; /* 필요에 따라 줄 간격, 폰트 크기 등 추가 스타일 */ line-height: 2; /* 글자 간격을 조절 */ font-size: 25px; position: absolute; left: 50%; bottom: -30%; text-align: center; color: #fff; animation: blink 6s infinite ease-in-out; transition: 0.5s; } 
+@keyframes blink { 0%, 20% { opacity: 1; /* 처음과 20% 구간에서는 완전히 보임 */ } 
+ 40% { opacity: 0; /* 40% 구간에서 사라짐 */ } 
+ 60% { opacity: 0; /* 60% 구간까지 사라진 상태 유지 */ } 
+ 80%, 100% { opacity: 1; /* 80%에서 100% 구간에서 다시 부드럽게 나타남 */ } 
+ }
+
+/* Banner */
+#banner { padding-top: 60%; position: relative; z-index: -1; } 
+#banner .centerbox1200 { position: relative; } 
+#banner h1 { font-size: 72px; text-align: center; color: #fff; font-family: 'JalnanGothic'; text-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4); position: relative; } 
+#banner h1::before { content: ""; position: absolute; width: 28%; height: 10px; background: #000; bottom: 15px; left: 36%; z-index: -3; } 
+.banner-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(200px, auto); gap: 40px; max-width: 1500px; margin: 80px auto; } 
+.banner-item { position: relative; overflow: hidden; border-radius: 5px; transition: transform 0.3s ease; cursor: pointer;} 
+.banner-item:hover { transform: scale(1.05); } 
+.banner-item img { width: 100%; } 
+
+.banner-grid2 { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(200px, auto); gap: 40px; max-width: 1500px; margin: 80px auto; } 
+/* airplane */
+.airplane figure { position: absolute; top: 35%; right: 0; z-index: -1; animation: fly 15s linear infinite;} 
+/* 비행기 애니메이션 정의 */
+@keyframes fly {
+    0% {
+        right: -100px; /* 시작 위치: 배너의 왼쪽 바깥 */
+        transform: translateY(-50%) scaleX(1); /* 원래 방향 유지 */
+    }
+    50% {
+        right: calc(100% - 100px); /* 오른쪽 끝으로 이동 */
+        transform: translateY(-50%) scaleX(1); /* 오른쪽 끝에서 원래 방향 유지 */
+    }
+    60% {
+        right: calc(100% - 100px); /* 오른쪽 끝에서 이미지가 반전됨 */
+        transform: translateY(-50%) scaleX(-1); /* 오른쪽 끝에서 반전된 상태로 유지 */
+    }
+    100% {
+        right: -100px; /* 다시 왼쪽으로 돌아감 */
+        transform: translateY(-50%) scaleX(-1); /* 왼쪽으로 이동하면서 반전 상태 유지 */
+    }
+}
+#banner .cloud figure { position: absolute; bottom: -10%; left: 0; z-index: -1; animation: floatAnimation 22s infinite; } 
+/* artwork */
+#artwork { padding-top: 20%; position: relative; z-index: -1; } 
+#artwork .centerbox1200 {} 
+#artwork h1 { font-size: 72px; text-align: center; color: #fff; font-family: 'JalnanGothic'; text-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4); position: relative; } 
+#artwork h1::before { content: ""; position: absolute; width: 28%; height: 10px; background: #000; bottom: 15px; left: 36%; z-index: -3; }
+#artwork .cloud figure { position: absolute; top: 0; left: 0; z-index: -1; animation: floatAnimation 18s infinite; }
+#artwork .artwork_grid {display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(200px, auto); gap: 40px; max-width: 1500px; margin: 80px auto; }
+.artwork-item { position: relative; overflow: hidden; border-radius: 5px; transition: transform 0.3s ease; cursor: pointer;} 
+.artwork-item:hover { transform: scale(1.05); } 
+.artwork-item img { width: 100%; box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4); } 
+#artwork .artwork-item span {display: flex; justify-content: center; margin-top: 10px; font-size: 24px; font-family: 'Pretendard-Medium';}
+/* graphic */
+#graphic { padding-top: 10%; position: relative; z-index: -1; } 
+#graphic .centerbox1200 {} 
+#graphic h1 { font-size: 72px; text-align: center; color: #fff; font-family: 'JalnanGothic'; text-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4); position: relative; } 
+#graphic h1::before { content: ""; position: absolute; width: 28%; height: 10px; background: #000; bottom: 15px; left: 36%; z-index: -3; }
+#graphic .graphic-grid {display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(200px, auto); gap: 60px; max-width: 1500px; margin: 80px auto; }
+.graphic-item { position: relative; overflow: hidden; border-radius: 5px; transition: transform 0.3s ease; cursor: pointer; box-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4);} 
+.graphic-item:hover { transform: scale(1.05); } 
+.graphic-item img { width: 100%;}
+#graphic .graphic-grid2 { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(200px, auto); gap: 60px; max-width: 1500px; margin: 10px auto; } 
+#graphic .graphic-grid2 .graphic-item img {width: 100%;}
+#graphic .cloud figure { position: absolute; top: 20%; left: 0; z-index: -1; animation: floatAnimation 18s infinite; }
+#graphic .cloud figure img {width: 80%;}
+
+/* footer */
+#contact {background-image: url('../images/bg.png'); background-repeat: no-repeat; background-position: center bottom; margin-top: 10%; display: flex; justify-content: center; align-items: center; width: 100%; }
+#contact .centerbox1200 {max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative;}
+.contact-info {width: 1300px; height: 600px; margin: 0 auto; padding: 20px; background: rgba(255, 255, 255, 0.2); border-radius: 15px; position: absolute; top: 20%; left: -4%;} 
+.contact-info h2 {text-align: left; font-size: 40px; color: #fff;}
+.contact-info p {margin: 10px 0; position: relative; font-size: 35px; color: #fff;}
+.contact-info p.phone {position: absolute; bottom: 24%; left: 20px;}
+.contact-info p.mail {position: absolute; bottom: 14%; left: 20px;}
+.contact-info p.instagram {position: absolute; bottom: 4%; left: 20px;}
+.contact-info span {position: absolute; bottom: 0; right: 0; padding: 30px; font-size: 50px; color: #fff; font-weight: bold;}
+.rainbow {display: flex; justify-content: center; /* 가로로 중앙 정렬 */
+align-items: center; /* 세로로 중앙 정렬 (필요 시) */}
+.rainbow figure {margin: 0; /* 기본 figure 여백 제거 */}
+.rainbow img {height: auto; /* 이미지의 비율 유지 */ }
+
