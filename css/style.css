@@ -34,7 +34,7 @@ header figure ul li.right2 { position: absolute; right: 60px; }
 #profile { width: 1444px; height: 791px; background: rgb(255, 255, 255, 0.2); margin: 0 auto; border-radius: 20px; position: relative; } 
 #profile h1 { padding: 20px 0 0 50px; color: #fff; font-family: 'JalnanGothic'; font-size: 40px; } 
 #profile h2 { position: absolute; top: 10%; left: 35px; z-index: 1; font-family: 'Pretendard-Bold'; } 
-#profile span { position: absolute; top: 22%; left: 20%; font-size: 24px; color: #fff; } 
+#profile span { position: absolute; top: 22%; left: 20%; font-size: 24px; color: #fff; line-height: 50px;} 
 /* license */
 #profile .license { width: 703px; height: 356px; background: rgb(255, 255, 255, 0.5); border: 4px solid #fff; position: absolute; left: 45px; bottom: 45px; } 
 #profile .license h3 { font-size: 40px; padding: 20px 30px; font-family: 'Pretendard-Light'; } 
@@ -131,7 +131,7 @@ header figure ul li.right2 { position: absolute; right: 60px; }
 @keyframes floatAnimation { 0%, 100% { transform: translateY(0); } 
  50% { transform: translateY(-50px); } 
  }
-.vertical-text { writing-mode: vertical-rl; text-orientation: upright; /* 필요에 따라 줄 간격, 폰트 크기 등 추가 스타일 */ line-height: 2; /* 글자 간격을 조절 */ font-size: 25px; position: absolute; left: 50%; bottom: -30%; text-align: center; color: #fff; animation: blink 6s infinite ease-in-out; transition: 0.5s; } 
+.vertical-text { writing-mode: vertical-rl; text-orientation: upright; /* 필요에 따라 줄 간격, 폰트 크기 등 추가 스타일 */ line-height: 2; /* 글자 간격을 조절 */ font-size: 25px; position: absolute; left: 48%; bottom: -30%; text-align: center; color: #fff; animation: blink 6s infinite ease-in-out; transition: 0.5s; } 
 @keyframes blink { 0%, 20% { opacity: 1; /* 처음과 20% 구간에서는 완전히 보임 */ } 
  40% { opacity: 0; /* 40% 구간에서 사라짐 */ } 
  60% { opacity: 0; /* 60% 구간까지 사라진 상태 유지 */ } 
@@ -179,7 +179,7 @@ header figure ul li.right2 { position: absolute; right: 60px; }
 #artwork .cloud figure { position: absolute; top: 0; left: 0; z-index: -1; animation: floatAnimation 18s infinite; }
 #artwork .artwork_grid {display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(200px, auto); gap: 40px; max-width: 1500px; margin: 80px auto; }
 .artwork-item { position: relative; overflow: hidden; border-radius: 5px; transition: transform 0.3s ease; cursor: pointer;} 
-.artwork-item:hover { transform: scale(1.05); } 
+.artwork-item:hover { transform: scale(1.2); } 
 .artwork-item img { width: 100%; box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4); } 
 #artwork .artwork-item span {display: flex; justify-content: center; margin-top: 10px; font-size: 24px; font-family: 'Pretendard-Medium';}
 /* graphic */
