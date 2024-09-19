@@ -34,7 +34,7 @@ header figure ul li.right2 { position: absolute; right: 60px; }
 #profile { width: 1444px; height: 791px; background: rgb(255, 255, 255, 0.2); margin: 0 auto; border-radius: 20px; position: relative; } 
 #profile h1 { padding: 20px 0 0 50px; color: #fff; font-family: 'JalnanGothic'; font-size: 40px; } 
 #profile h2 { position: absolute; top: 10%; left: 35px; z-index: 1; font-family: 'Pretendard-Bold'; } 
-#profile span { position: absolute; top: 22%; left: 20%; font-size: 24px; color: #fff; line-height: 50px;} 
+#profile span { position: absolute; top: 20%; left: 20%; font-size: 24px; color: #fff; line-height: 50px;} 
 /* license */
 #profile .license { width: 703px; height: 356px; background: rgb(255, 255, 255, 0.5); border: 4px solid #fff; position: absolute; left: 45px; bottom: 45px; } 
 #profile .license h3 { font-size: 40px; padding: 20px 30px; font-family: 'Pretendard-Light'; } 
