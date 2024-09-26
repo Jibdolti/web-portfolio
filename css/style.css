@@ -32,11 +32,11 @@ header figure ul li.right2 { position: absolute; right: 60px; }
 #profile h2 { position: absolute; top: 10%; left: 35px; z-index: 1; font-family: 'Pretendard-Bold'; } 
 #profile span { position: absolute; top: 20%; left: 20%; font-size: 24px; color: #fff; line-height: 50px;} 
 /* license */
-#profile .license { width: 703px; height: 356px; background: rgb(255, 255, 255, 0.5); border: 4px solid #fff; position: absolute; left: 45px; bottom: 45px; } 
+#profile .license { width: 703px; height: 380px; background: rgb(255, 255, 255, 0.5); border: 4px solid #fff; position: absolute; left: 45px; bottom: 45px; } 
 #profile .license h3 { font-size: 40px; padding: 20px 30px; font-family: 'Pretendard-Light'; } 
 #profile .license ul { display: flex; justify-content: space-between; align-items: baseline; } 
 #profile .license ul li.title { font-size: 24px; float: left; margin: 25px 0 0 30px;} 
-#profile .license ul li.date { font-size: 22px; float: right; margin-right: 25px;} 
+#profile .license ul li.date { font-size: 22px; float: right; margin-right: 25px;}
 /* career */
 #profile .career { width: 593px; height: 378px; background: rgb(255, 255, 255, 0.5); border: 4px solid #fff; position: absolute; top: 85px; right: 45px; } 
 #profile .career h3 { font-size: 40px; padding: 20px 30px; font-family: 'Pretendard-Light'; } 
