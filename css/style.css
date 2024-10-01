@@ -4,11 +4,40 @@
 @import url(font.css); 
 @import url(aos.css); /* AOS 애니메이션 기본 설정 */
 
-body { background-image: url("../images/Background.jpg"); object-fit: cover; overflow-x: hidden; margin: 0 auto; padding: 0; height: 100vh;}
+body { background-image: url("../images/Background.jpg"); object-fit: cover; overflow-x: hidden; margin: 0 auto; padding: 0; width: 100%; height: 100vh;}
+
+.star_mouse { position: absolute; pointer-events: none; top: 280px; left: 50%; border-radius: 50%;  z-index: 10; margin-left: -590px; transition: 3s;}
+
+ .star_mouse figure{background: #fff; 
+    box-shadow: 0 0px 20px #06d2da,
+                0 0px 30px #f71919,
+                0 0px 40px #fffb0c; animation: starMouse .1s infinite alternate; position: absolute; transition: 3s cubic-bezier(.13,.56,.07,1.01); }
+    @keyframes starMouse {
+        0% {box-shadow: 0 0px 20px #06d2da,
+            0 0px 30px #f71919,
+            0 0px 40px #fffb0c; }
+        100% {box-shadow: 0 0px 10px #06d2da,
+            0 0px 10px #f71919,
+            0 0px 10px #fffb0c; }
+        }
+            
+ .star_mouse figure:nth-child(1){width: 10px;height: 10px; position: absolute; margin-left: 60px; top: 30px; border-radius: 50%; transform: rotate(30deg); transition-delay: 0.01s;}
+ .star_mouse figure:nth-child(2){width: 5px;height: 5px; position: absolute; margin-left: 30px; top: 30px; border-radius: 50%; transform: rotate(20deg); transition-delay: 0.04s;}
+ .star_mouse figure:nth-child(3){width: 15px;height: 15px; position: absolute; margin-left: 50px; top: 50px; border-radius: 50%;transition-delay: 0s;}
+ .star_mouse img {width: 180%; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
 
 
+
+ 
 header { margin: 0 auto; } 
 header .container { position: relative; text-align: center;}
+header .container .dal { position: relative;}
+header .container .dal:before {content: ""; position: absolute; background: #fff; width: 620px; height: 630px; left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 50%; box-shadow: 0 0 200px #fff,0 0 50px #fff; animation: dal 2s forwards;}
+@keyframes dal { 
+    0% {box-shadow: 0 0 2000px #8e2aa7,0 0 1000px #fff; } 
+    70% {box-shadow: 0 0 50px #1f7a86,0 0 50px #fff;  } 
+    100% {box-shadow: 0 0 100px #513674,0 0 50px #fff;  } 
+ }
 header .container img.moon { width: auto; /* 배경 이미지 크기 조정 */ margin: 20px; animation: moon 18s infinite; }
 @keyframes moon { 
     0%, 100% { transform: translateY(0); } 
@@ -17,12 +46,15 @@ header .container img.moon { width: auto; /* 배경 이미지 크기 조정 */ m
 header .container img { width: auto; /* 배경 이미지 크기 조정 */ margin: 20px; } 
 
 header .container h1 {width: 100%; position: absolute; top: 50%; left: 52%; transform: translate(-50%, -50%); color: white; font-size: 80px; font-weight: bold; letter-spacing: -0.1em; font-family: 'Pretendard-Bold'; /* 텍스트 그림자 */ text-align: center;}
-header .container h1 span {font-size: 200px; position: relative; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); animation: h1Text 1s forwards; top: 100px; opacity: 0;}
+header .container h1 span {font-size: 200px; position: relative; animation: h1Text 3s forwards; top: 100px; opacity: 0; color: #aaa;}
 @keyframes h1Text {
-    0% {top: 100px; opacity: 0;}
-    30% {top: 20px; opacity: 1;}
-    60% {top: 50px; opacity: 0.5;}
-    100% {top: 20px; opacity: 1;}
+    0% {top: 80px; opacity: 0;}
+    10% {top: 30px; opacity: 1;}
+    30% {top: 60px; opacity: 0.5;}
+    60% {top: 40px; opacity: 1;}
+    70% {opacity: 1; color: #aaa;}
+    80% {opacity: 1; color: #fff;}
+    100% {top: 20px; opacity: 1; color: #eee;}
 }
 header .container h1 span:nth-child(1) {animation-delay: 0.1s;}
 header .container h1 span:nth-child(2) {animation-delay: 0.2s;}
@@ -35,12 +67,12 @@ header .container h1 span:nth-child(8) {animation-delay: 0.8s;}
 header .container h1 span:nth-child(9) {animation-delay: 0.9s;}
 header .container h1 span:nth-child(10) {animation-delay: 1s;}
 
-header .container h1 span:before {content: attr(data-h1); position: absolute; left: 0; top: 6px; color: #eee; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0);  animation: h1Text2 1s forwards; top: 6px; opacity: 0;}
+header .container h1 span:before {content: attr(data-h1); position: absolute; left: 0; top: 6px; color: #aaa; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0);  animation: h1Text2 1s forwards; top: 6px; opacity: 0; z-index: -1;text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); }
 @keyframes h1Text2 {
-    0% {top: 100px; opacity: 0; }
-    30% {top: 20px; opacity: 0.5;}
-    60% {top: 50px; opacity: 0.5; color: #fff;}
-    100% {top: 6px; opacity: 1;}
+    0% {opacity: 0; }
+    30% {opacity: 0.5;}
+    60% {opacity: 0.5; color: #fff;}
+    100% {opacity: 1;}
 }
 header .container h1 span:nth-child(1):before {animation-delay: 0.3s;}
 header .container h1 span:nth-child(2):before {animation-delay: 0.4s;}
@@ -62,7 +94,7 @@ header .container h2 { position: absolute; top: 40%; left: 28%; transform: trans
 header .star0 {transform-origin: center; position: absolute; width: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); }
 
 header .star0 ul {} 
-header .star0 ul li.left { position: absolute; top: 120px; left: 60px; animation: starbox1 3s forwards;} 
+header .star0 ul li.left { position: absolute; top: 120px; left: 60px; animation: starbox1 3s forwards; } 
 @keyframes starbox1 {
     0% {transform:translate(-50%, -50%) rotate(-90deg);}
     100% {transform:translate(-50%, -50%) rotate(-70deg);}
@@ -70,11 +102,10 @@ header .star0 ul li.left { position: absolute; top: 120px; left: 60px; animation
 
 header .star0 ul li.left figure { position: absolute; top: 120px; left: 60px; width: 30px;height: 30px; border-radius: 50%; background: #fff;
     box-shadow: 0 0px 30px #fff,
-                0 0px 40px #fff,
-                0 0px 50px #fff; animation: star1 5s forwards; opacity: 0;}
+                0 0px 40px #1f7a86,
+                0 0px 50px #fff; animation: star1 1s forwards; opacity: 0;}
 
                 @keyframes star1 {
-
                     0% {margin-top: 1000px; opacity: 0;}
                     20% {opacity: 1;}
                     100% {margin-top: 0; opacity: 1;}
@@ -100,11 +131,10 @@ header .star0 ul li.right { position: absolute; top: 20%; left: 50%; animation: 
 header .star0 ul li.right { position: absolute; top: 120px; right: 60px; } 
 header .star0 ul li.right figure { position: absolute; top: 120px; right: 60px; width: 30px;height: 30px; border-radius: 50%; background: #fff;
     box-shadow: 0 0px 30px #fff,
-                0 0px 40px #fff,
+                0 0px 40px #8e2aa7,
                 0 0px 50px #fff; animation: star2 5s forwards;}
 
                 @keyframes star2 {
-
                     0% {margin-top: 1000px; }
                     100% {margin-top: 0; }
                 }
@@ -133,8 +163,30 @@ header .star0 ul li.right2 { position: absolute; right: 60px; }
 
 #profile { width: 1444px; height: 820px; background: rgb(255, 255, 255, 0.2); margin: 0 auto; border-radius: 20px; position: relative; margin-top: 300px; } 
 #profile h1 { padding: 20px 0 0 50px; color: #fff; font-family: 'JalnanGothic'; font-size: 40px; } 
-#profile h2 { position: absolute; top: 10%; left: 35px; z-index: 1; font-family: 'Pretendard-Bold'; } 
-#profile span { position: absolute; top: 20%; left: 20%; font-size: 24px; color: #fff; line-height: 50px;} 
+#profile h2 { position: absolute; top: 10%; left: 35px; z-index: 1; font-family: 'Pretendard-Bold'; perspective: 200px;} 
+#profile h2 .back {width: 220px; height: 220px; border-radius: 50%; position: absolute; overflow: hidden; top: 70px;}
+#profile.on h2 .back {animation: proBack 3s forwards;}
+@keyframes proBack {
+    0% {top: 70px;}
+    100% {top:0px;}
+    
+} 
+#profile h2 .back img {position: absolute; right: 0; top: 0; }
+#profile.on h2 .back img {animation: proBackImg 3s forwards;}
+@keyframes proBackImg {
+    0% {top: 0px;}
+    100% {top: -50px;}
+}
+#profile h2 .char {position: absolute; z-index: 2;} 
+#profile h2 .char img {position: absolute; z-index: 2; opacity: 0;}
+#profile.on h2 .char img {animation: proChar 3s forwards; }
+@keyframes proChar {
+    0% {left: 0px; opacity: 0;}
+    100% {left: 90px; opacity: 1;}
+}
+
+
+#profile span.ex { position: absolute; top: 20%; left: 20%; font-size: 24px; color: #fff; line-height: 50px; width: 350px; } 
 /* license */
 #profile .license { width: 703px; height: 380px; background: rgb(255, 255, 255, 0.5); border: 4px solid #fff; position: absolute; left: 45px; bottom: 45px; } 
 #profile .license h3 { font-size: 40px; padding: 20px 30px; font-family: 'Pretendard-Light'; } 
@@ -160,78 +212,114 @@ header .star0 ul li.right2 { position: absolute; right: 60px; }
 #profile .star ul li.right2 { position: absolute; right: -12%; bottom: -10%; } 
 
 /* WEB SITE */
-#website { padding-top: 15%; position: relative; height: 3000px; } 
+#website { padding-top: 15%; position: relative; height: 3000px;} 
 #website h1 { font-size: 72px; text-align: center; color: #fff; font-family: 'JalnanGothic'; text-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4); position: relative; } 
 #website h1::before { content: ""; position: absolute; width: 25%; height: 10px; background: #000; bottom: 15px; left: 38%; z-index: -1; } 
 /* side img */
-#website .rock { position: absolute; width: 500px; display: flex; justify-content: center; align-items: center; } 
-#website .rock img { width: 100%; } 
-#website .rock:nth-child(odd) { right: 0%; animation: floatAnimation 13s infinite; } 
-#website .rock:nth-child(even) { left: -0%; } 
+#website .rock { position: absolute; width: 500px; display: flex; justify-content: center; align-items: center; transition: 2s; } 
+#website .rock img { width: 100%; animation: floatAnimation 13s infinite; } 
+#website .rock:nth-child(odd) { right: 0%; transform-origin: left;} 
+#website .rock:nth-child(even) { left: -0%;  transform-origin: right} 
 #website .rock:nth-child(1) { top: 15%; width: 30%; } 
-#website .rock:nth-child(2) { top: 30%; width: 35%; animation: floatAnimation 15s infinite; } 
+#website .rock:nth-child(2) { top: 30%; width: 35%; } 
 #website .rock:nth-child(3) { top: 50%; right: 8%; width: 35%; } 
-#website .rock:nth-child(4) { top: 70%; animation: floatAnimation 18s infinite; } 
+#website .rock:nth-child(4) { top: 70%; } 
 #website .rock:nth-child(5) { top: 80%; } 
-#website .rock:nth-child(6) { top: 95%; animation: floatAnimation 22s infinite; } 
+#website .rock:nth-child(6) { top: 95%; } 
 
 /* text */
-#website .rock h2, p { line-height: 40px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); font-weight: bold; } 
-#website .rock h2 span { color: #fff; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); } 
-#website .rock p span { color: #fff; font-family: 'Pretendard-Light'; line-height: 45px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); } 
+#website .rock h2 span { color: #fff; text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.5); } 
+#website .rock h2 span { color: #fff; text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.5); } 
+#website .rock p span { color: #fff; font-family: 'Pretendard-Light'; line-height: 45px; text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.8); } 
 
 /* button */
 #website .rock button { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: 8%; right: 50%; } 
-#website .rock button.second { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: 5%; left: 50%; } 
-#website .rock button.third { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: -5%; right: 25%; } 
-#website .rock button.fourth { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: -7%; right: 25%; } 
-#website .rock button.Fifth { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: 10%; right: 50%; } 
-#website .rock button.Sixth { width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; bottom: 5%; left: 40%; } 
+#website .rock button.second {bottom: 5%; left: 50%; } 
+#website .rock button.third {bottom: -5%; right: 25%; } 
+#website .rock button.fourth {bottom: -7%; right: 25%; } 
+#website .rock button.Fifth {bottom: 10%; right: 50%; } 
+#website .rock button.Sixth {bottom: 5%; left: 40%; } 
 #website .rock button a { color: #fff; display: block; } 
 #website .rock button:hover { background-color: #ff8000; } 
 
+
+
+
+#website .rock .explain {background:rgba(0, 0, 0, 0); position: absolute; width: 400px; height: 340px; padding: 20px; box-sizing: border-box; transition: 0.2s;}
+#website .rock:hover .explain {background:rgba(0, 0, 0, 0.8);text-shadow: 0 0 10px rgba(0, 0, 0, 1);}
+#website .rock .explain h2 {font-weight: lighter; margin-bottom: 20px;}
+#website .rock .explain p {font-weight: lighter; font-size: 20px; line-height: 1.3; color: #e0b999;}
+#website .rock .explain p span {line-height: 1.4}
+
 /* nth(1) */
-#website .rock:nth-child(1) h2 { width: 260px; height: 67px; position: absolute; top: 35%; right: 75%; color: #ffa200; font-family: 'Pretendard-Light' !important; text-align: right; } 
-#website .rock:nth-child(1) p { width: 332px; height: 222px; position: absolute; top: 45%; right: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
-#website .rock:nth-child(1) p.design { width: 332px; height: 222px; position: absolute; top: 73%; right: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
-#website .rock:nth-child(1) p.publsing { width: 332px; height: 222px; position: absolute; top: 79%; right: 65%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+#website .rock:nth-child(1) .explain {top: 35%; right: 75%; }
+#website .rock:nth-child(1):hover .explain {right: 90%; }
+#website .rock:nth-child(1) h2 {text-align: right;color: #e0b999; font-family: 'Pretendard-Light' !important; }
+#website .rock:nth-child(1) p {text-align: right;}
+#website .rock:nth-child(1) p.design {text-align: right;color: #e0b999; margin-top: 20px;}
+#website .rock:nth-child(1) p.publsing {text-align: right;color: #e0b999;}
+#website .rock:nth-child(1) button {position: absolute; right: -50px; bottom: -60px;}
+
 /* nth(2) */
-#website .rock:nth-child(2) h2 { width: 102px; height: 22px; position: absolute; top: 42%; left: 80%; color: #ffa200; font-family: 'Pretendard-Light' !important; font-size: 24px; } 
-#website .rock:nth-child(2) p { width: 340px; height: 242px; position: absolute; top: 50%; left: 80%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; } 
-#website .rock:nth-child(2) p.design { width: 332px; height: 222px; position: absolute; top: 77%; left: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
-#website .rock:nth-child(2) p.publsing { width: 332px; height: 222px; position: absolute; top: 82%; left: 65%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+
+/* nth(1) */
+#website .rock:nth-child(2) .explain {top: 35%; left: 75%; }
+#website .rock:nth-child(2):hover .explain { left: 90%; }
+#website .rock:nth-child(2) h2 {text-align: left;color: #e0b999; font-family: 'Pretendard-Light' !important; }
+#website .rock:nth-child(2) p {text-align: left;}
+#website .rock:nth-child(2) p.design {text-align: left;color: #e0b999; margin-top: 20px;}
+#website .rock:nth-child(2) p.publsing {text-align: left;color: #e0b999;}
+#website .rock:nth-child(2) button {position: absolute; left: -50px; bottom: -60px;}
+
 /* nth(3) */
-#website .rock:nth-child(3) h2 { width: 270px; height: 120px; position: absolute; top: 30%; right: -10%; color: #ffa200; font-family: 'Pretendard-Light' !important; } 
-#website .rock:nth-child(3) p { width: 349px; height: 297px; position: absolute; top: 45%; right: -20%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; } 
-#website .rock:nth-child(3) p.design { position: absolute; top: 84%; right: 10%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
-#website .rock:nth-child(3) p.publsing { position: absolute; top: 90%; right: 15%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+#website .rock:nth-child(3) .explain {top: 35%; right: 0%; }
+#website .rock:nth-child(3):hover .explain {right: 20%;}
+#website .rock:nth-child(3) h2 {text-align: right;color: #e0b999; font-family: 'Pretendard-Light' !important; }
+#website .rock:nth-child(3) p {text-align: right;}
+#website .rock:nth-child(3) p.design {text-align: right;color: #e0b999; margin-top: 20px;}
+#website .rock:nth-child(3) p.publsing {text-align: right;color: #e0b999;}
+#website .rock:nth-child(3) button {position: absolute; right: 150px; bottom: -60px;}
+
 /* nth(4) */
-#website .rock:nth-child(4) h2 { width: 114px; height: 65px; position: absolute; top: 32%; left: 75%; color: #ffa200; font-family: 'Pretendard-Light' !important; } 
-#website .rock:nth-child(4) p { width: 409px; height: 297px; position: absolute; top: 45%; left: 80%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; } 
-#website .rock:nth-child(4) p.design { position: absolute; top: 85%; left: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
-#website .rock:nth-child(4) p.publsing { position: absolute; top: 91%; left: 65%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+#website .rock:nth-child(4) .explain {top: 35%; left: 75%; }
+#website .rock:nth-child(4):hover .explain { left: 90%; }
+#website .rock:nth-child(4) h2 {text-align: left;color: #e0b999; font-family: 'Pretendard-Light' !important; }
+#website .rock:nth-child(4) p {text-align: left;}
+#website .rock:nth-child(4) p.design {text-align: left;color: #e0b999; margin-top: 20px;}
+#website .rock:nth-child(4) p.publsing {text-align: left;color: #e0b999;}
+#website .rock:nth-child(4) button {position: absolute; left: -50px; bottom: -60px;}
+
 /* nth(5) */
-#website .rock:nth-child(5) h2 { width: 198px; height: 76px; position: absolute; top: 25%; right: 70%; color: #ffa200; font-family: 'Pretendard-Light' !important; text-align: right; } 
-#website .rock:nth-child(5) p { width: 429px; height: 187px; position: absolute; top: 40%; right: 70%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
-#website .rock:nth-child(5) p.design { position: absolute; top: 68%; right: 75%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
-#website .rock:nth-child(5) p.publsing { position: absolute; top: 74%; right: 65%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: right; } 
+#website .rock:nth-child(5) .explain {top: 35%; right: 75%; }
+#website .rock:nth-child(5):hover .explain {right: 90%; }
+#website .rock:nth-child(5) h2 {text-align: right;color: #e0b999; font-family: 'Pretendard-Light' !important; }
+#website .rock:nth-child(5) p {text-align: right;}
+#website .rock:nth-child(5) p.design {text-align: right;color: #e0b999; margin-top: 20px;}
+#website .rock:nth-child(5) p.publsing {text-align: right;color: #e0b999;}
+#website .rock:nth-child(5) button {position: absolute; right: -50px; bottom: -60px;}
+
 /* nth(6) */
-#website .rock:nth-child(6) h2 { width: 169px; height: 76px; position: absolute; top: 40%; left: 70%; color: #ffa200; font-family: 'Pretendard-Light' !important; text-align: left; } 
-#website .rock:nth-child(6) p { width: 429px; height: 187px; position: absolute; top: 53%; left: 70%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
-#website .rock:nth-child(6) p.design { position: absolute; top: 76%; left: 60%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
-#website .rock:nth-child(6) p.publsing { position: absolute; top: 82%; left: 50%; font-size: 24px; color: #ffa200; font-family: 'Pretendard-Light'; text-align: left; } 
+#website .rock:nth-child(6) .explain {top: 35%; left: 75%; }
+#website .rock:nth-child(6):hover .explain { left: 90%; }
+#website .rock:nth-child(6) h2 {text-align: left;color: #e0b999; font-family: 'Pretendard-Light' !important; }
+#website .rock:nth-child(6) p {text-align: left;}
+#website .rock:nth-child(6) p.design {text-align: left;color: #e0b999; margin-top: 20px;}
+#website .rock:nth-child(6) p.publsing {text-align: left;color: #e0b999;}
+#website .rock:nth-child(6) button {position: absolute; left: -50px; bottom: -60px;}
+
 /* background */
 #website .ballon li:nth-child(1) { position: absolute; top: 20%; left: 13%; z-index: -1; animation: floatAnimation 15s infinite; } 
 #website .ballon li:nth-child(2) { position: absolute; right: -5%; bottom: -45%; z-index: -1; animation: floatAnimation 18s infinite reverse; } 
 #website .ballon li:nth-child(2) img { width: 90%; } 
+
 /* cloud */
 #website .cloud li:nth-child(1) { position: absolute; top: 28%; right: -5%; z-index: -1; animation: floatAnimation 20s infinite; } 
 #website .cloud li:nth-child(2) { position: absolute; top: 70%; left: -20%; z-index: -1; width: 30%; animation: floatAnimation 25s infinite reverse; } 
 #website .cloud li:nth-child(3) { position: absolute; right: -40%; bottom: -45%; mix-blend-mode: screen; animation: floatAnimation 22s infinite; } 
 
-@keyframes floatAnimation { 0%, 100% { transform: translateY(0); } 
+/* @keyframes floatAnimation { 0%, 100% { transform: translateY(0); } 
  50% { transform: translateY(-50px); } 
- }
+ } */
 .vertical-text { writing-mode: vertical-rl; text-orientation: upright; /* 필요에 따라 줄 간격, 폰트 크기 등 추가 스타일 */ line-height: 2; /* 글자 간격을 조절 */ font-size: 25px; position: absolute; left: 48%; bottom: -30%; text-align: center; color: #fff; animation: blink 6s infinite ease-in-out; transition: 0.5s; } 
 @keyframes blink { 0%, 20% { opacity: 1; /* 처음과 20% 구간에서는 완전히 보임 */ } 
  40% { opacity: 0; /* 40% 구간에서 사라짐 */ } 
@@ -241,38 +329,39 @@ header .star0 ul li.right2 { position: absolute; right: 60px; }
 /* App Design */
 #app { padding-top: 60%; position: relative; z-index: -1; } 
 #app .centerbox1200 { position: relative; } 
-#app h1 { font-size: 72px; text-align: center; color: #fff; font-family: 'JalnanGothic'; text-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4); position: relative; } 
+#app h1 { font-size: 72px; text-align: center; color: #fff; font-family: 'JalnanGothic'; /* text-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4); */ position: relative; } 
 #app h1::before { content: ""; position: absolute; width: 28%; height: 10px; background: #000; bottom: 15px; left: 36%; z-index: -3; }
 
 /* text */
-#app h2, p { line-height: 40px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); font-weight: bold; line-height: 45px;} 
-#app h2 span { color: #fff; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); } 
-#app p span { color: #fff; font-family: 'Pretendard-Light'; line-height: 45px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); font-size: 28px;}
-#app h2.title {color: #fff; font-size: 30px;}
-#app p.info {line-height: 35px; font-size: 15px;}
+#app h2, p { line-height: 40px; /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) */; font-weight: bold; line-height: 45px;} 
+#app h2 span { color: #fff; /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) */; } 
+#app p span { color: #fff; font-family: 'Pretendard-Light'; line-height: 45px; /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);  */font-size: 28px;}
+
+#app h2.title {color: #fff; font-size: 24px;}
+#app p.info {line-height: 35px; font-size: 20px;}
 
 .app_design {position: relative;}
 .app_design ul {}
 .app_design ul li {}
 .app_design ul li.end {position: absolute; top: 0; right: 0;}
 .app_design ul li img {width: 30%; animation: floatAnimation 16s infinite;}
-@keyframes floatAnimation { 0%, 100% { transform: translateY(0); } 
+/* @keyframes floatAnimation { 0%, 100% { transform: translateY(0); } 
  50% { transform: translateY(50px); } 
- }
+ } */
  .app_design ul li.end img {width: 30%; animation: floatAnimation 16s infinite;}
-@keyframes floatAnimation { 0%, 100% { transform: translateY(0); } 
- 50% { transform: translateY(50px); } 
+@keyframes floatAnimation { 0%, 100% {transform:translateY( 0); } 
+ 50% {transform:translateY( 50px); } 
  }
-.app_design h2 {position: absolute; top: 10%; left: 25%; font-size: 40px; font-family: 'Pretendard-SemiBold'; color: #ffa200;}
-.app_design p {position: absolute; top: 30%; left: 25%; font-size: 40px;}
-.app_design p.design {position: absolute; top: 55%; font-size: 30px;}
-.app_design p.tool {position: absolute; top: 65%; font-size: 30px;}
-.app_design button {width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Bold'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; top: 75%; left: 25%; }
+.app_design h2 {position: absolute; top: 10%; left: 25%; font-size: 30px; font-family: 'Pretendard-Light'; color: #000;}
+.app_design p {position: absolute; top: 30%; left: 25%; font-size: 30px;}
+.app_design p.design {position: absolute; top: 55%; font-size: 24px;}
+.app_design p.tool {position: absolute; top: 65%; font-size: 24px;}
+.app_design button {width: 140px; height: 50px; background: #ffa200; font-size: 20px; font-family: 'Pretendard-Light'; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out; position: absolute; top: 75%; left: 25%; }
 .app_design button a { color: #fff; display: block; } 
 .app_design button:hover { background-color: #ff8000; } 
-.color ul li:nth-child(1) {position: absolute; top: 39%; left: 25%; width: 50px; height: 50px; border-radius: 50%;  border: 1px solid transparent; background: #E2FDFF;}
-.color ul li:nth-child(2) {position: absolute; top: 39%; left: 30%; width: 50px; height: 50px; border-radius: 50%;  border: 1px solid transparent; background: #205AEF;}
-.color ul li:nth-child(3) {position: absolute; top: 39%; left: 35%; width: 50px; height: 50px; border-radius: 50%;  border: 1px solid transparent; background: #FFD81B;}
+.color ul li:nth-child(1) {position: absolute; top: 36%; left: 25%; width: 30px; height: 30px; border-radius: 50%;  border: 1px solid transparent; background: #E2FDFF;}
+.color ul li:nth-child(2) {position: absolute; top: 36%; left: 30%; width: 30px; height: 30px; border-radius: 50%;  border: 1px solid transparent; background: #205AEF;}
+.color ul li:nth-child(3) {position: absolute; top: 36%; left: 35%; width: 30px; height: 30px; border-radius: 50%;  border: 1px solid transparent; background: #FFD81B;}
 .app-view {display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(200px, auto); gap: 40px; max-width: 1500px; margin: 80px auto; text-align: center;}
 .app-item img { width: 80%; }
 
@@ -285,6 +374,13 @@ header .star0 ul li.right2 { position: absolute; right: 60px; }
 
 
 /* Banner */
+.banner_view {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, .9); z-index: 777; color: #e0b999; display: flex; justify-content: center; align-items: center; text-align: center; display: none; }
+
+.banner_view h2 {text-align: center; font-family: 'Pretendard-Light'; font-weight: lighter; margin: 20px 0;}
+.banner_view p {text-align: center; font-family: 'Pretendard-Light'; font-weight: lighter; line-height: 1.5;}
+
+
+
 #banner {position: relative; z-index: -1; } 
 #banner .centerbox1200 { position: relative; } 
 #banner h1 { font-size: 72px; text-align: center; color: #fff; font-family: 'JalnanGothic'; text-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4); position: relative; } 
@@ -334,9 +430,19 @@ header .star0 ul li.right2 { position: absolute; right: 60px; }
 #graphic h1 { font-size: 72px; text-align: center; color: #fff; font-family: 'JalnanGothic'; text-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4); position: relative; } 
 #graphic h1::before { content: ""; position: absolute; width: 28%; height: 10px; background: #000; bottom: 15px; left: 36%; z-index: -3; }
 #graphic .graphic-grid {display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(200px, auto); gap: 60px; max-width: 1500px; margin: 80px auto; }
-.graphic-item { position: relative; overflow: hidden; border-radius: 5px; transition: transform 0.3s ease; cursor: pointer; box-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4);} 
-.graphic-item:hover { transform: scale(1.05); } 
-.graphic-item img { width: 100%;}
+
+.graphic-item { position: relative; overflow: hidden; border-radius: 5px; transition: transform 0.3s ease; cursor: pointer; } 
+.graphic-item:hover { transform: scale(1.05) ; } 
+
+
+.graphic-item img { width: 100%; /* backface-visibility: hidden; */ transition: .3s;box-shadow: 4px 5px 14px rgba(0, 0, 0, 0.4);}
+.graphic-item .backcard {position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, .5); left: 0; top: 0; transition: .3s; color: #fff; transform: rotateY(180deg); backface-visibility: hidden; display: flex; justify-content: center; align-items: center;}
+
+.graphic-item.on img {transform: rotateY(180deg);}
+.graphic-item.on .backcard {transform: rotateY(0deg);}
+
+
+
 #graphic .graphic-grid2 { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(200px, auto); gap: 60px; max-width: 1500px; margin: 10px auto; } 
 #graphic .graphic-grid2 .graphic-item img {width: 100%;}
 #graphic .cloud figure { position: absolute; top: 20%; left: 0; z-index: -1; animation: floatAnimation 18s infinite; }

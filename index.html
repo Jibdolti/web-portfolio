@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <div class="star_mouse">
+        <figure><img src="images/star.png" alt=""></figure>
+        <figure><img src="images/star.png" alt=""></figure>
+        <figure><img src="images/star.png" alt=""></figure>
+    </div>
     <header>
         <div class="centerbox1200">
             <div class="container">
                 <!-- 배경 이미지 -->
-                <img src="images/moon.png" class="moon" alt="Moon Background">
+                <figure class="dal"><img src="images/moon2.png" class="moon" alt="Moon Background"></figure>
                 <!-- 제목 -->
                 <h1>
                     <span data-h1="P">P</span>
@@ -63,9 +69,12 @@
 
     <section id="profile">
         <h1>PROFILE.</h1>
-        <h2><img src="images/pro_img.png" alt=""></h2>
-        <span>새로운것을 배우고 <br>모험심이 넘쳐나는 강성민 입니다.</span>
-        <div class="license">
+        <h2>
+            <span class="back"><img src="images/profile_img2.png" alt=""></span>
+            <span class="char"><img src="images/profile_img1.png" alt=""></span>
+        </h2>
+        <span class="ex"></span>
+        <div class="license" data-aos="fade-up">
             <h3 class="main">LICENSE</h3>
             <ul>
                 <li class="title">2종보통 운전면허</li>
@@ -89,7 +98,7 @@
             </ul>
            
         </div>
-        <div class="career">
+        <div class="career" data-aos="fade-up" data-aos-offset="100">
             <h3 class="main">CAREER</h3>
             <ul>
                 <li class="title">분당경영고등학교 <br>미디어 디자인과</li>
@@ -105,7 +114,7 @@
                 <li class="date">2024.05.08 ~ 2024.10.04</li>
             </ul>
         </div>
-        <div class="skill">
+        <div class="skill" data-aos="fade-up" data-aos-offset="300">
             <h3 class="main">SKILL</h3>
             <ul>
                 <li><img src="images/ai.png" alt=""></li>
@@ -130,82 +139,97 @@
         <div class="centerbox1200">
         <h1>WEB SITE</h1>
         <div class="container">
-        <div class="rock"><a href="https://jibdolti.github.io/FCBayern/" target="_blank" rel="noopener noreferrer">
-            <img src="images/FCB.png" alt="Website 1">
-            </a>
-            <h2>주제<span>:<br>FC Bayern Munchen</span></h2>
-            <p>설명<span>:<br>
-                FC Bayern Munchen 이라는<br>
-                독일 축구팀 홈페이지를<br>
-                참고하여 간단하게 페이지를<br>
-                제작하였다.</span></p>
-              <p class="design">DESIGN : 100%</p>  
-              <p class="publsing">PUBLSING : 80%</p> 
-              <button><a href="https://jibdolti.github.io/FCBayern/" target="_blank" rel="noopener noreferrer">View</a></button> 
-        </div>
-        <div class="rock"><a href="https://jibdolti.github.io/NEW-KIA/index.html" target="_blank" rel="noopener noreferrer">
-            <img src="images/KIA.png" alt="Website 2">
-            </a>
-            <h2>주제<span>: KIA</span></h2>
-            <p>설명<span>:<br> 
-                기아 홈페이지를 참고하여 <br> 기아만에 색감을 추가하고 [셀토스] <br> 차량을 중심으로 하여 <br>디자인을 하였다.</span></p>
-                <p class="design">DESIGN : 100%</p>  
-              <p class="publsing">PUBLSING : 70%</p> 
-              <button class="second"><a href="https://jibdolti.github.io/NEW-KIA/index.html" target="_blank" rel="noopener noreferrer">View</a></button> 
-        </div>
-        <div class="rock"><a href="http://tjdals0228.dothome.co.kr/LOL/" target="_blank" rel="noopener noreferrer">
-            <img src="images/LOL.png" alt="Website 3">
-            </a>
-            <h2>주제<span>: <br>LEAGUE OF LEGENDS</span></h2>
-            <p>설명<br><span>: 
-                글로벌게임인 LEAGUE OF <br>
-                LEGENDS를 참고하여<br>
-                제작하였고 간략한 설명부터 챔피언, <br>
-                게임의 새소식들을<br>
-                볼수있게 홈페이지를 제작 하였다. </span></p>
-                <p class="design">DESIGN : 100%</p>  
-              <p class="publsing">PUBLSING : 70%</p> 
-              <button class="third"><a href="http://tjdals0228.dothome.co.kr/LOL/" target="_blank" rel="noopener noreferrer">View</a></button> 
-        </div>
-        <div class="rock"><a href="http://tjdals0228.dothome.co.kr/SUMMER/" target="_blank" rel="noopener noreferrer">
-            <img src="images/SUMMER.png" alt="Website 4">
-            </a>
-            <h2>주제<span>: <br>여름사진관</span></h2>
-            <p>설명<span>: <br>
-                여름 사진관이라는 여름느낌에 사진들을<br>
-                업로드 하고 기록 할 수 있고<br>
-                여러사람들과 장소와 사용한 카메라등등을<br>
-                공유 할 수 있는 커뮤니티까지<br>
-                갖추어진 홈페이지이다.</span></p>
-              <p class="design">DESIGN : 100%</p>  
-              <p class="publsing">PUBLSING : 60%</p> 
-              <button class="fourth"><a href="http://tjdals0228.dothome.co.kr/SUMMER/" target="_blank" rel="noopener noreferrer">View</a></button>
-        </div>
-        <div class="rock"><a href="https://jibdolti.github.io/overthepitch/#" target="_blank" rel="noopener noreferrer">
-            <img src="images/OVER.png" alt="Website 5">
-            </a>
-            <h2>주제<span>: <br>OVERTHEPITCH</span></h2>
-            <p>설명<span>:<br>
-                축구 유니폼 홈페이지를 FULLPAGE.JS를 <br> 
-                사용하여 각 페이지별로 간단하게<br>
-                제작하여 조금 더 눈에 띄게 제작해보았다. </span></p>
-                <p class="design">DESIGN : 100%</p>  
-              <p class="publsing">PUBLSING : 60%</p> 
-              <button class="Fifth"><a href="https://jibdolti.github.io/overthepitch/#" target="_blank" rel="noopener noreferrer">View</a></button>
-        </div>
-        <div class="rock"><a href="https://jibdolti.github.io/Wadiz-STORE/#" target="_blank" rel="noopener noreferrer">
-            <img src="images/WADIZ.png" alt="Website 6">
-            </a>
-            <h2>주제<span>: <br>Wadiz STORE</span></h2>
-            <p>설명<span>:<br>
-                Wadiz 스토어라는 펀딩홈페이지 중<br>
-                스토어 부분을 다른 쇼핑몰 페이지 처럼<br>
-                간단하게 제작하였다.</span></p>
-                <p class="design">DESIGN : 100%</p>  
-              <p class="publsing">PUBLSING : 60%</p>
-                <button class="Sixth"><a href="https://jibdolti.github.io/Wadiz-STORE/#" target="_blank" rel="noopener noreferrer">View</a></button>
-        </div>
+            <div class="rock">
+                <a href="https://jibdolti.github.io/FCBayern/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/FCB.png" alt="Website 1">
+                </a>
+                <div class="explain">
+                    <h2>주제<span>:<br>FC Bayern Munchen</span></h2>
+                    <p>설명<span>:<br>
+                        FC Bayern Munchen 이라는<br>
+                        독일 축구팀 홈페이지를<br>
+                        참고하여 간단하게 페이지를<br>
+                        제작하였다.</span></p>
+                    <p class="design">DESIGN : 100%</p>  
+                    <p class="publsing">PUBLSING : 80%</p> 
+                    <button><a href="https://jibdolti.github.io/FCBayern/" target="_blank" rel="noopener noreferrer">View</a></button> 
+                </div>
             </div>
+            <div class="rock"><a href="https://jibdolti.github.io/NEW-KIA/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/KIA.png" alt="Website 2">
+                </a>
+                <div class="explain">
+                <h2>주제<span>: KIA</span></h2>
+                <p>설명<span>:<br> 
+                    기아 홈페이지를 참고하여 <br> 기아만에 색감을 추가하고 [셀토스] <br> 차량을 중심으로 하여 <br>디자인을 하였다.</span></p>
+                    <p class="design">DESIGN : 100%</p>  
+                <p class="publsing">PUBLSING : 70%</p> 
+                <button class="second"><a href="https://jibdolti.github.io/NEW-KIA/index.html" target="_blank" rel="noopener noreferrer">View</a></button> 
+                </div>
+            </div>
+            <div class="rock"><a href="http://tjdals0228.dothome.co.kr/LOL/" target="_blank" rel="noopener noreferrer">
+                <img src="images/LOL.png" alt="Website 3">
+                </a>
+                
+                <div class="explain">
+                    <h2>주제<span>: <br>LEAGUE OF LEGENDS</span></h2>
+                    <p>설명<br><span>: 
+                    글로벌게임인 LEAGUE OF <br>
+                    LEGENDS를 참고하여<br>
+                    제작하였고 간략한 설명부터 챔피언, <br>
+                    게임의 새소식들을<br>
+                    볼수있게 홈페이지를 제작 하였다. </span></p>
+                    <p class="design">DESIGN : 100%</p>  
+                <p class="publsing">PUBLSING : 70%</p> 
+                <button class="third"><a href="http://tjdals0228.dothome.co.kr/LOL/" target="_blank" rel="noopener noreferrer">View</a></button> 
+                </div>
+            </div>
+            <div class="rock"><a href="http://tjdals0228.dothome.co.kr/SUMMER/" target="_blank" rel="noopener noreferrer">
+                <img src="images/SUMMER.png" alt="Website 4">
+                </a>
+                
+                <div class="explain">
+                    <h2>주제<span>: <br>여름사진관</span></h2>
+                    <p>설명<span>: <br>
+                    여름 사진관이라는 여름느낌에 사진들을<br>
+                    업로드 하고 기록 할 수 있고<br>
+                    여러사람들과 장소와 사용한 카메라등등을<br>
+                    공유 할 수 있는 커뮤니티까지<br>
+                    갖추어진 홈페이지이다.</span></p>
+                    <p class="design">DESIGN : 100%</p>  
+                    <p class="publsing">PUBLSING : 60%</p> 
+                    <button class="fourth"><a href="http://tjdals0228.dothome.co.kr/SUMMER/" target="_blank" rel="noopener noreferrer">View</a></button>
+                </div>
+            </div>
+            <div class="rock"><a href="https://jibdolti.github.io/overthepitch/#" target="_blank" rel="noopener noreferrer">
+                <img src="images/OVER.png" alt="Website 5">
+                </a>
+                <div class="explain">
+                    <h2>주제<span>: <br>OVERTHEPITCH</span></h2>
+                    <p>설명<span>:<br>
+                    축구 유니폼 홈페이지를 FULLPAGE.JS를 <br> 
+                    사용하여 각 페이지별로 간단하게<br>
+                    제작하여 조금 더 눈에 띄게 제작해보았다. </span></p>
+                    <p class="design">DESIGN : 100%</p>  
+                    <p class="publsing">PUBLSING : 60%</p> 
+                    <button class="Fifth"><a href="https://jibdolti.github.io/overthepitch/#" target="_blank" rel="noopener noreferrer">View</a></button>
+                </div>
+            </div>
+            <div class="rock"><a href="https://jibdolti.github.io/Wadiz-STORE/#" target="_blank" rel="noopener noreferrer">
+                <img src="images/WADIZ.png" alt="Website 6">
+                </a>
+                <div class="explain">
+                    <h2>주제<span>: <br>Wadiz STORE</span></h2>
+                    <p>설명<span>:<br>
+                    Wadiz 스토어라는 펀딩홈페이지 중<br>
+                    스토어 부분을 다른 쇼핑몰 페이지 처럼<br>
+                    간단하게 제작하였다.</span></p>
+                    <p class="design">DESIGN : 100%</p>  
+                    <p class="publsing">PUBLSING : 60%</p>
+                    <button class="Sixth"><a href="https://jibdolti.github.io/Wadiz-STORE/#" target="_blank" rel="noopener noreferrer">View</a></button>
+                </div>
+            </div>
+        </div>
             <div class="ballon">
                 <ul>
                     <li><img src="images/ballon.png" alt=""></li>
@@ -251,19 +275,22 @@
             <div class="app-view">
                 <div class="app-item"><img src="images/app/Steps-Menu.png" alt="스텝">
                 <h2 class="title">Steps-Menu</h2>
-                <p class="info">걸음 수와 Daily Trend를 적용시켜 사용자가 얼마나 걸었는지
-                    <br>상세하게 나타낼 수 있게 디자인 하였습니다.
+                <p class="info">걸음 수와 Daily Trend를 적용시켜 사용자가 <br>
+                얼마나 걸었는지 상세하게 나타낼 수 있게<br>
+                디자인 하였습니다.
                 </p>
             </div>
                 <div class="app-item"><img src="images/app/Food-Menu.png" alt="음식">
                 <h2 class="title">Food-Menu</h2>
-                <p class="info">사용자의 칼로리 소비와 섭취량을 나타내어 기초대사량, 섭취량, 체중등을
-                    <br>Daily Trend로 상세하게 나타낼 수 있게 디자인 하였습니다.
+                <p class="info">사용자의 칼로리 소비와 섭취량을 나타내어<br>
+                 기초대사량, 섭취량, 체중등을 Daily Trend로 상세하게<br>
+                 나타낼 수 있게 디자인 하였습니다.
                 </p>
             </div>
                 <div class="app-item"><img src="images/app/Rest-Menu.png" alt="휴식">
                 <h2 class="title">Rest-Menu</h2>
-                <p class="info">휴식상태, 휴식패턴 등을 보여주며 장기적으로 자신의 수면의 질과 효율성을 <br>체계적으로 관리하고, 수면의 질을 향상시킬 방법을 <br>모색할 수 있게 디자인 하였습니다.
+                <p class="info">휴식상태, 휴식패턴 등을 보여주며<br>
+                장기적으로 자신의 수면의 질과 효율성을 <br>체계적으로 관리하고, 수면의 질을 향상시킬 방법을 <br>모색할 수 있게 디자인 하였습니다.
                 </p>
             </div>
             </div>
@@ -277,32 +304,32 @@
 
     <section id="banner">
         <div class="centerbox1200">
-        <h1>BANNER</h1>
-        <div class="banner-grid">
-            <div class="banner-item"><img src="images/banner/banner1.png" alt="배너 1"></div>
-            <div class="banner-item"><img src="images/banner/banner2.png" alt="배너 2"></div>
-            <div class="banner-item"><img src="images/banner/banner3.png" alt="배너 3"></div>
-            <div class="banner-item"><img src="images/banner/banner4.png" alt="배너 4"></div>
-            <div class="banner-item"><img src="images/banner/banner5.png" alt="배너 5"></div>
-            <div class="banner-item"><img src="images/banner/banner6.png" alt="배너 6"></div>
-            <div class="banner-item"><img src="images/banner/banner7.png" alt="배너 7"></div>
-            <div class="banner-item"><img src="images/banner/banner8.jpg" alt="배너 8"></div>
+            <h1>BANNER</h1>
+            <div class="banner-grid">
+                <div class="banner-item"><img src="images/banner/banner1.png" alt="배너 1"></div>
+                <div class="banner-item"><img src="images/banner/banner2.png" alt="배너 2"></div>
+                <div class="banner-item"><img src="images/banner/banner3.png" alt="배너 3"></div>
+                <div class="banner-item"><img src="images/banner/banner4.png" alt="배너 4"></div>
+                <div class="banner-item"><img src="images/banner/banner5.png" alt="배너 5"></div>
+                <div class="banner-item"><img src="images/banner/banner6.png" alt="배너 6"></div>
+                <div class="banner-item"><img src="images/banner/banner7.png" alt="배너 7"></div>
+                <div class="banner-item"><img src="images/banner/banner8.jpg" alt="배너 8"></div>
             </div>
             <div class="banner-grid2">
-            <div class="banner-item"><img src="images/banner/banner9.png" alt="배너 9"></div>
-            <div class="banner-item"><img src="images/banner/poster.png" alt="포스터"></div>
-            <div class="banner-item"><img src="images/banner/banner10.png" alt="배너 10"></div>
+                <div class="banner-item"><img src="images/banner/banner9.png" alt="배너 9"></div>
+                <div class="banner-item"><img src="images/banner/poster.png" alt="포스터"></div>
+                <div class="banner-item"><img src="images/banner/banner10.png" alt="배너 10"></div>
             </div>
-        <div class="airplane">
-            <figure>
-                <img src="images/air.png" alt="">
-            </figure>
-        </div>
-        <div class="cloud">
-            <figure>
-                <img src="images/c4.png" alt="">
-            </figure>
-        </div>
+            <div class="airplane">
+                <figure>
+                    <img src="images/air.png" alt="">
+                </figure>
+            </div>
+            <div class="cloud">
+                <figure>
+                    <img src="images/c4.png" alt="">
+                </figure>
+            </div>
         </div>
     </section>
 
@@ -316,39 +343,73 @@
                 </figure>
             </div>
             <div class="artwork_grid">
-            <div class="artwork-item"><img src="images/artwork/artwork1.png" alt="아트워크 1">
-            <span>Alice-in-Wonderland</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork2.png" alt="아트워크 2">
-            <span>Another Dimension Travel</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork3.png" alt="아트워크 3">
-            <span>BMO's Trip</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork4.png" alt="아트워크 4">
-            <span>Dream World</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork5.png" alt="아트워크 5">
-            <span>Dream-break</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork6.png" alt="아트워크 6">
-            <span>Duck's-new-school-year</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork7.png" alt="아트워크 7">
-            <span>Enchanted-Dreamscape</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork8.png" alt="아트워크 8">
-            <span>Gromit's-Imagine</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork9.png" alt="아트워크 9">
-            <span>Holidays in Space</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork10.png" alt="아트워크 10">
-            <span>Moonlight Piano Play</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork11.png" alt="아트워크 11">
-            <span>Mr. Bear's Magic School</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork12.png" alt="아트워크 12">
-            <span>planet-laugh</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork13.png" alt="아트워크 13">
-            <span>Route-66</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork14.png" alt="아트워크 14">
-            <span>Space Traveler</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork15.png" alt="아트워크 15">
-            <span>Space Adventure</span></div>
-            <div class="artwork-item"><img src="images/artwork/artwork16.png" alt="아트워크 16">
-            <span>Teddy Bear's Picnic</span></div>
-        </div>
+                <div class="artwork-item"
+                    data-ex="설명1설명1">
+                    <img src="images/artwork/artwork1.png" alt="아트워크 1">
+                    <span>Alice-in-Wonderland</span>
+                </div>
+                <div class="artwork-item"
+                    data-ex="설명2설명2">
+                    <img src="images/artwork/artwork2.png" alt="아트워크 2">
+                    <span>Another Dimension Travel</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork3.png" alt="아트워크 3">
+                    <span>BMO's Trip</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork4.png" alt="아트워크 4">
+                    <span>Dream World</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork5.png" alt="아트워크 5">
+                    <span>Dream-break</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork6.png" alt="아트워크 6">
+                    <span>Duck's-new-school-year</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork7.png" alt="아트워크 7">
+                    <span>Enchanted-Dreamscape</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork8.png" alt="아트워크 8">
+                    <span>Gromit's-Imagine</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork9.png" alt="아트워크 9">
+                    <span>Holidays in Space</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork10.png" alt="아트워크 10">
+                    <span>Moonlight Piano Play</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork11.png" alt="아트워크 11">
+                    <span>Mr. Bear's Magic School</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork12.png" alt="아트워크 12">
+                    <span>planet-laugh</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork13.png" alt="아트워크 13">
+                    <span>Route-66</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork14.png" alt="아트워크 14">
+                    <span>Space Traveler</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork15.png" alt="아트워크 15">
+                    <span>Space Adventure</span>
+                </div>
+                <div class="artwork-item">
+                    <img src="images/artwork/artwork16.png" alt="아트워크 16">
+                    <span>Teddy Bear's Picnic</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -356,24 +417,53 @@
         <div class="centerbox1200">
             <h1>GRAPHIC</h1>
             <div class="graphic-grid">
-                <div class="graphic-item"><img src="images/graphic/graphic1.png" alt="그래픽 1"></div>
-                <div class="graphic-item"><img src="images/graphic/graphic2.png" alt="그래픽 2"></div>
-                <div class="graphic-item"><img src="images/graphic/graphic3.png" alt="그래픽 3"></div>
-                <div class="graphic-item"><img src="images/graphic/graphic4.png" alt="그래픽 4"></div>
-                <div class="graphic-item"><img src="images/graphic/graphic5.png" alt="그래픽 5"></div>
-                <div class="graphic-item"><img src="images/graphic/graphic6.png" alt="그래픽 6"></div>
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic1.png" alt="그래픽 1">
+                    <div class="backcard"></div>
                 </div>
-                <div class="graphic-grid2">
-                <div class="graphic-item"><img src="images/graphic/graphic7.png" alt="그래픽 7"></div>
-                <div class="graphic-item"><img src="images/graphic/graphic8.png" alt="그래픽 8"></div>
-                <div class="graphic-item"><img src="images/graphic/graphic9.png" alt="그래픽 9"></div>
-                <div class="graphic-item"><img src="images/graphic/graphic10.png" alt="그래픽 10"></div>
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic2.png" alt="그래픽 2">
+                    <div class="backcard"></div>
                 </div>
-                <div class="cloud">
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic3.png" alt="그래픽 3">
+                    <div class="backcard"></div>
+                </div>
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic4.png" alt="그래픽 4">
+                    <div class="backcard"></div>
+                </div>
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic5.png" alt="그래픽 5">
+                    <div class="backcard"></div>
+                </div>
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic6.png" alt="그래픽 6">
+                    <div class="backcard"></div>
+                </div>
+            </div>
+            <div class="graphic-grid2">
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic7.png" alt="그래픽 7">
+                    <div class="backcard"></div>
+                </div>
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic8.png" alt="그래픽 8">
+                    <div class="backcard"></div>
+                </div>
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic9.png" alt="그래픽 9">
+                    <div class="backcard"></div>
+                </div>
+                <div class="graphic-item">
+                    <img src="images/graphic/graphic10.png" alt="그래픽 10">
+                    <div class="backcard"></div>
+                </div>
+            </div>
+            <div class="cloud">
                 <figure>
                     <img src="images/c7.png" alt="">
                 </figure>
-            </div>
             </div>
         </div>
     </section>
@@ -396,9 +486,29 @@
 
 
 
+
+    <div class="banner_view">
+        <div class="banner_view_item">
+            <img src="" alt="">
+            <h2><!-- 제목 --></h2>
+            <p><!-- 내용 --></p>
+        </div>
+    </div>
+
+
+
+
     
     <script src="script/jquery-3.7.1.js"></script>
     <script src="script/action.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 
+<script>
+    
+</script>
 </body>
 </html>
