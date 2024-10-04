@@ -4,7 +4,10 @@
 @import url(font.css); 
 @import url(aos.css); /* AOS 애니메이션 기본 설정 */
 
-body { background-image: url("../images/Background.jpg"); object-fit: cover; overflow-x: hidden; margin: 0 auto; padding: 0; width: 100%; height: 100vh;}
+body { background-image: url("../images/Background.jpg"); object-fit: cover; overflow-x: hidden; margin: 0 auto; padding: 0; width: 100%; height: 100vh; user-select: none; /* 텍스트 선택 방지 */
+-webkit-user-select: none; /* Safari와 Chrome 브라우저용 */
+-moz-user-select: none; /* Firefox 브라우저용 */
+-ms-user-select: none; /* Internet Explorer/Edge 브라우저용 */}
 
 .star_mouse { position: absolute; pointer-events: none; top: 280px; left: 50%; border-radius: 50%;  z-index: 10; margin-left: -590px; transition: 3s;}
 
@@ -28,6 +31,7 @@ body { background-image: url("../images/Background.jpg"); object-fit: cover; ove
 
 
 #visitorCount {opacity: 0.2; color: #5D616D;}
+button {opacity: 0.2; color: #5D616D;}
  
 
 
