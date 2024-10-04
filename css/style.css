@@ -27,8 +27,10 @@ body { background-image: url("../images/Background.jpg"); object-fit: cover; ove
  .star_mouse img {width: 180%; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
 
 
-
+#visitorCount {opacity: 0.2; color: #5D616D;}
  
+
+
 header { margin: 0 auto; } 
 header .container { position: relative; text-align: center;}
 header .container .dal { position: relative;}
