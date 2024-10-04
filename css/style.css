@@ -31,7 +31,7 @@ body { background-image: url("../images/Background.jpg"); object-fit: cover; ove
 
 
 #visitorCount {opacity: 0.2; color: #5D616D;}
-button {opacity: 0.2; color: #5D616D;}
+button.visit {opacity: 0.2; color: #5D616D;}
  
 
 
