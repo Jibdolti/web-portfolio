@@ -148,3 +148,22 @@ $(document).ready(function() {
     })
 });
 
+// 페이지 로드 시 실행
+window.onload = function() {
+  // localStorage에서 카운터 값 가져오기 (없으면 0으로 설정)
+  let visitCount = localStorage.getItem('visitCount');
+  
+  // 방문자 수를 초기화하고 싶다면 기존 값을 무시하고 0부터 시작
+  if (visitCount === null) {
+      visitCount = 0;
+  }
+
+  // 방문자 수 증가
+  visitCount++;
+  
+  // 업데이트된 카운터 값을 localStorage에 저장
+  localStorage.setItem('visitCount', visitCount);
+  
+  // 화면에 방문자 수 출력
+  document.getElementById('visitorCount').innerText = `방문자 수: ${visitCount}`;
+};
