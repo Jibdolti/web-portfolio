@@ -147,27 +147,3 @@ $(document).ready(function() {
       $(this).toggleClass('on')
     })
 });
-
-// 페이지 로드 시 실행
-window.onload = function() {
-  // localStorage에서 카운터 값 가져오기 (없으면 0으로 설정)
-  let visitCount = localStorage.getItem('visitCount') || 0;
-  
-  // 방문자 수 증가
-  visitCount++;
-  
-  // 업데이트된 카운터 값을 localStorage에 저장
-  localStorage.setItem('visitCount', visitCount);
-  
-  // 화면에 방문자 수 출력
-  document.getElementById('visitorCount').innerText = `방문자 수: ${visitCount}`;
-};
-
-// 방문자 수를 0으로 초기화하는 함수
-function resetVisitorCount() {
-  // 방문자 수를 0으로 설정
-  localStorage.setItem('visitCount', 0);
-  
-  // 화면에 방문자 수 업데이트
-  document.getElementById('visitorCount').innerText = `방문자 수: 0`;
-}
