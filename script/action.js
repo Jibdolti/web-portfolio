@@ -88,10 +88,10 @@ $(document).ready(function(){
 //       updateStarMousePosition();
 //   });
 
-//   // 스크롤 이벤트
-//   $(window).scroll(function() {
-//       updateStarMousePosition();
-//   });
+  // 스크롤 이벤트
+  $(window).scroll(function() {
+      updateStarMousePosition();
+  });
 
 //   // 마우스 위치 업데이트 함수
 //   function updateStarMousePosition() {
