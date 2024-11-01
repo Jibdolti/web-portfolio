@@ -76,35 +76,35 @@ $(document).ready(function(){
     }).go();
   }
 })
-// $(document).ready(function() {
-//   // 마우스 위치 변수
-//   var mouseX = 0;
-//   var mouseY = 0;
+$(document).ready(function() {
+  // 마우스 위치 변수
+  var mouseX = 0;
+  var mouseY = 0;
 
-//   // 마우스 이동 이벤트
-//   $(document).mousemove(function(event) {
-//       mouseX = event.pageX;
-//       mouseY = event.pageY;
-//       updateStarMousePosition();
-//   });
+  // 마우스 이동 이벤트
+  $(document).mousemove(function(event) {
+      mouseX = event.pageX;
+      mouseY = event.pageY;
+      updateStarMousePosition();
+  });
 
   // 스크롤 이벤트
   $(window).scroll(function() {
       updateStarMousePosition();
   });
 
-//   // 마우스 위치 업데이트 함수
-//   function updateStarMousePosition() {
-//       $('.star_mouse').css({
-//           left:0,
-//           top:0,
-//           marginLeft:0
-//       });
-//       $('.star_mouse figure').css({
-//           left: mouseX + 'px',
-//           top: mouseY + 'px'
-//       });
-//   }
+  // 마우스 위치 업데이트 함수
+  function updateStarMousePosition() {
+      $('.star_mouse').css({
+          left:0,
+          top:0,
+          marginLeft:0
+      });
+      $('.star_mouse figure').css({
+          left: mouseX + 'px',
+          top: mouseY + 'px'
+      });
+  }
 
 
 
